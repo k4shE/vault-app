@@ -1,7 +1,7 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1vault1
 kind: Application
 metadata:
-  name: my-app-argo-application
+  name: my-app-argo-vault
   namespace: argocd
 spec:
   project: default
