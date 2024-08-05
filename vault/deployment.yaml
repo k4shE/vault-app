@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vault-test
+  labels:
+    app: vault-app
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: vault-app
+    template:
+      metadata:
+        labels:
+          app: vault-app
+      spec:
+        containers:
+          - name: vault-container
+            image: hashicorp/vault
+            ports:
+              - containerPort: 80
